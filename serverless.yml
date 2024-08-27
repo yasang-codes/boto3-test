@@ -7,11 +7,12 @@ service: Boto3Test
 
 provider:
   name: aws
-  runtime: python3.12
+  runtime: python3.9
+  region: ap-south-1
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/hello.handler
     events:
       - httpApi:
           path: /
